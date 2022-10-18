@@ -1,4 +1,6 @@
+import java.util.Random;
 import java.util.Scanner;
+ 
 
 public class emailGenerator {
     public static void main(String[] args) {
@@ -18,7 +20,7 @@ String selectionMenu = s.nextLine();
 
 
 
-// Ref 
+// Ref
 // BSullivan@fdrhs.org
     }
 
@@ -27,6 +29,7 @@ String selectionMenu = s.nextLine();
 
         Scanner s = new Scanner(System.in);
 
+        Random random = new Random();
 System.out.println("Input your first name:");
 String firstName = s.nextLine();
 firstName = firstName.toLowerCase();
@@ -38,13 +41,11 @@ lastName = lastName.toLowerCase();
 lastName = lastName.substring(0,1);
 lastName = lastName.replaceAll(" ", ""); // Final lastName variable
 
-System.out.println("Enter your Student OSIS Number:");
-String studentOSIS = s.nextLine();
-studentOSIS = studentOSIS.substring(5);
-studentOSIS = studentOSIS.replaceAll(" ", ""); // Final studentOSIS variable
 String DOEDOMAIN = "@nycstudents.net";
 
-System.out.println("Your email is " + firstName + lastName + studentOSIS + DOEDOMAIN);
+int randomNum = random.nextInt(12) + 1 ;
+
+System.out.println("Your email is " + firstName + lastName + randomNum + DOEDOMAIN);
 
     }
 
@@ -72,5 +73,18 @@ System.out.println("Your email is " + firstName + lastName + studentOSIS + DOEDO
         System.out.println("Your email is " + firstName + lastName + DOEDOMAIN);
 
 
-    }
+    } // end of teacherGenerator
+
+   public static void generatePassword(int length) {    // start pf generatePassword
+    
+int asciiValue1 = 65;
+char char1 = (char)(asciiValue1);
+System.out.println(char1);
+   }    // end of generatePassword
+
+        
+    
+
+   
 }
+ 
