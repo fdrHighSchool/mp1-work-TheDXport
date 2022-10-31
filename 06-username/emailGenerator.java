@@ -18,6 +18,10 @@ String selectionMenu = s.nextLine();
         studentGenerator();
     }
 
+ System.out.println("How long do you want your password to be?");
+ int userPasswordLength = s.nextInt();
+ System.out.println();
+ 
 
 
 // Ref
@@ -75,11 +79,41 @@ System.out.println("Your email is " + firstName + lastName + randomNum + DOEDOMA
 
     } // end of teacherGenerator
 
-   public static void generatePassword(int length) {    // start pf generatePassword
+   public static void generatePassword(int length) {    // start of generatePassword
+    char[] password = new char[length];
+    // generate a value between 33 - 47 for symbols (inclusive)
     
-int asciiValue1 = 65;
+        for(int i = 0; i < length; i++) {
+    char c1 = (char)((int)(Math.random()*(47 - 33) + 1));
+    password[i] = c1;
+    }
+
+    //generate a value between 48 - 57 for numbers (inclusive)
+
+        for(int i = 0; i < length; i++) {
+
+    }
+
+
+    //generate a value between 65 - 90 for capital letters (inclusive)
+
+        for(int i = 0; i < length; i++) {
+
+    }
+
+    //generate a value between 97 - 122 for lowercase letters (inclusive)
+
+        for(int i = 0; i < length; i++) {
+
+    }
+System.out.println(password);
+
+
+/* int asciiValue1 = 65;
 char char1 = (char)(asciiValue1);
-System.out.println(char1);
+System.out.println(char1); */
+
+
    }    // end of generatePassword
 
         
